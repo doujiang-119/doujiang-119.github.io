@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FBF9F5">
+<title>Samantha · 心理咨询行业近十年</title>
+<meta name="description" content="Samantha，广州。在心理咨询行业近十年，一直做培训交付这一端。写给正在犹豫要不要进入这个行业的人。">
+<style>
+  :root{
+    --paper:#FBF9F5;
+    --ink:#1A1917;
+    --ink-2:#5D574F;
+    --ink-3:#918A80;
+    --line:#E6E1D6;
+    --accent:#9B3D2E;
+    --accent-soft:#F4EAE4;
+    --max:640px;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+    font-size:17px;
+    line-height:1.78;
+    -webkit-font-smoothing:antialiased;
+    padding-bottom:calc(86px + env(safe-area-inset-bottom));
+  }
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+  section{padding:44px 0}
+  .hair{height:1px;background:var(--line);border:0;margin:0}
+
+  /* ---------- 首屏 ---------- */
+  .hero{padding:52px 0 40px}
+  .eyebrow{
+    font-size:12.5px;letter-spacing:.14em;color:var(--ink-3);
+    margin:0 0 20px;display:flex;gap:10px;align-items:center;
+  }
+  .eyebrow i{width:18px;height:1px;background:var(--accent);display:block;font-style:normal}
+  h1{
+    font-size:clamp(42px,12.5vw,62px);
+    line-height:1.02;letter-spacing:-.025em;
+    font-weight:600;margin:0 0 22px;
+  }
+  .lead{font-size:19px;line-height:1.72;margin:0 0 16px;color:var(--ink)}
+  .lead-2{font-size:16px;line-height:1.8;color:var(--ink-2);margin:0}
+  .lead-2 strong{font-weight:600;color:var(--ink)}
+
+  /* ---------- 态度 ---------- */
+  .stance{background:var(--accent-soft);padding:46px 0}
+  .quote{
+    margin:0;padding-left:18px;border-left:2px solid var(--accent);
+    font-size:clamp(21px,5.6vw,27px);line-height:1.66;font-weight:500;letter-spacing:-.01em;
+  }
+  .quote span{display:block;margin-top:14px;color:var(--ink-2);font-weight:400}
+  .quote-note{font-size:15px;color:var(--ink-2);margin:22px 0 0}
+
+  /* ---------- 提问 ---------- */
+  .num{font-size:12px;letter-spacing:.16em;color:var(--accent);margin:0 0 10px;font-weight:600}
+  h2{font-size:clamp(23px,6.2vw,30px);line-height:1.42;letter-spacing:-.015em;font-weight:600;margin:0 0 26px}
+  ol.q{list-style:none;counter-reset:q;margin:0;padding:0}
+  ol.q li{
+    counter-increment:q;
+    display:grid;grid-template-columns:30px 1fr;gap:6px;
+    padding:20px 0;border-top:1px solid var(--line);
+    font-size:17.5px;line-height:1.7;
+  }
+  ol.q li:last-child{border-bottom:1px solid var(--line)}
+  ol.q li::before{
+    content:counter(q,decimal-leading-zero);
+    font-size:12px;letter-spacing:.08em;color:var(--ink-3);
+    padding-top:6px;font-variant-numeric:tabular-nums;
+  }
+  .after{font-size:16px;color:var(--ink-2);margin:24px 0 0}
+
+  /* ---------- 证据 ---------- */
+  .body-p{font-size:17px;line-height:1.8;color:var(--ink);margin:0 0 26px}
+  .body-p .hl{background:linear-gradient(transparent 62%,rgba(155,61,46,.18) 62%)}
+  .stats{
+    display:grid;grid-template-columns:1fr 1fr;gap:1px;
+    background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;
+  }
+  .stat{background:var(--paper);padding:20px 16px}
+  .stat .v{
+    font-size:27px;font-weight:600;letter-spacing:-.02em;line-height:1.15;
+    display:block;font-variant-numeric:tabular-nums;
+  }
+  .stat .v.sm{font-size:19.5px;letter-spacing:-.01em}
+  .stat .k{font-size:13px;line-height:1.6;color:var(--ink-2);display:block;margin-top:8px}
+  .syst{margin:30px 0 0;padding:0;list-style:none}
+  .syst li{padding:16px 0;border-top:1px solid var(--line);font-size:16px;line-height:1.7}
+  .syst li:last-child{border-bottom:1px solid var(--line)}
+  .syst b{display:block;font-weight:600;font-size:16.5px;margin-bottom:2px}
+  .syst span{color:var(--ink-2);font-size:15px}
+  .disclaim{font-size:13.5px;line-height:1.75;color:var(--ink-3);margin:24px 0 0}
+
+  /* ---------- 联系 ---------- */
+  #contact{padding-bottom:64px}
+  .cta-p{font-size:17px;line-height:1.8;margin:0 0 26px;color:var(--ink)}
+  .todo{
+    border:1.5px dashed #C9BFB0;border-radius:12px;
+    padding:22px 18px;text-align:center;background:#FFFDFA;
+  }
+  .todo .t{font-size:15px;color:var(--accent);font-weight:600;letter-spacing:.02em}
+  .todo .d{font-size:13.5px;color:var(--ink-3);margin-top:6px;line-height:1.7}
+  .cta-sub{font-size:15px;color:var(--ink-2);margin:22px 0 0}
+
+  footer{border-top:1px solid var(--line);padding:26px 0 34px;font-size:13px;color:var(--ink-3);line-height:1.8}
+
+  /* ---------- 手机底部固定条 ---------- */
+  .bar{
+    position:fixed;left:0;right:0;bottom:0;z-index:20;
+    padding:10px 18px calc(10px + env(safe-area-inset-bottom));
+    background:rgba(251,249,245,.94);
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+    border-top:1px solid var(--line);
+  }
+  .bar a{
+    display:flex;align-items:center;justify-content:center;
+    min-height:52px;border-radius:999px;background:var(--accent);color:#fff;
+    text-decoration:none;font-size:17px;font-weight:600;letter-spacing:.02em;
+  }
+  .bar a:active{opacity:.85}
+
+  @media (min-width:720px){
+    body{font-size:17.5px;padding-bottom:0}
+    .hero{padding:88px 0 60px}
+    section{padding:64px 0}
+    .stance{padding:72px 0}
+    .bar{display:none}
+    .stat{padding:26px 22px}
+  }
+  @media (prefers-reduced-motion:no-preference){
+    html{scroll-behavior:smooth}
+  }
+</style>
+</head>
+<body>
+
+<header class="wrap hero">
+  <p class="eyebrow"><i></i>广州 · 心理咨询行业 近十年</p>
+  <h1>Samantha</h1>
+  <p class="lead">我在心理咨询行业待了将近十年，做的是培训交付——课最后到底怎么上出来的那一段。</p>
+  <p class="lead-2">这一页不是简历。是写给<strong>正在犹豫要不要进这行</strong>的人。</p>
+</header>
+
+<hr class="hair">
+
+<section class="stance">
+  <div class="wrap">
+    <blockquote class="quote">
+      如果你想要暴富，我不建议你进入这个行业，那只是一个幻想。
+      <span>但如果你想持续地提升自己、想让自己的生命更有厚度，我会建议你进入。</span>
+    </blockquote>
+    <p class="quote-note">我知道这句话会劝退一些人。它本来就是这个作用。</p>
+  </div>
+</section>
+
+<section class="wrap">
+  <p class="num">01 &nbsp;/&nbsp; 在你决定进来之前</p>
+  <h2>大概就是这三个问题吧</h2>
+  <ol class="q">
+    <li>这行到底是怎么运转的？外面那些说法，有几分是真的？</li>
+    <li>我这样的背景，进来能做什么？</li>
+    <li>值得我把时间和钱投进去吗？</li>
+  </ol>
+  <p class="after">这三个问题，我更愿意当面跟你讲，而不是写成一页漂亮话。</p>
+</section>
+
+<hr class="hair">
+
+<section class="wrap">
+  <p class="num">02 &nbsp;/&nbsp; 我凭什么说这些</p>
+  <h2>我一直在培训和交付这一端</h2>
+  <p class="body-p">这些年我做的不是市场，不是招生，是<span class="hl">课真正上出来的那一段</span>。现在在一家心理咨询培训公司负责培训交付团队，管交付运营、课程运营，也管内部和外部的讲师。</p>
+
+  <div class="stats">
+    <div class="stat"><span class="v">10 人</span><span class="k">我带的团队规模</span></div>
+    <div class="stat"><span class="v">约半年</span><span class="k">从接手到把团队状态扭转过来</span></div>
+    <div class="stat"><span class="v sm">近 9h → 7–7.5h</span><span class="k">团队日均工时</span></div>
+    <div class="stat"><span class="v sm">约 1 万场</span><span class="k">近一年团队交付的直播，日均三十多场</span></div>
+  </div>
+
+  <ul class="syst">
+    <li><b>交付全流程标准化</b><span>把一门培训从开始到结课的每个环节，一条条定下来。</span></li>
+    <li><b>讲师「选、育、用、留」</b><span>从挑人、培养，到用起来、留下来，搭了一套师资管理体系。</span></li>
+  </ul>
+
+  <p class="disclaim">以上均为我在团队内的真实经历，数字口径已确认。页内涉及的机构与协作方已做模糊处理。</p>
+</section>
+
+<hr class="hair">
+
+<section class="wrap" id="contact">
+  <p class="num">03 &nbsp;/&nbsp; 想聊就来</p>
+  <h2>关于入行、转行、这行的真实情况</h2>
+  <p class="cta-p">你问，我按我知道的说；不知道的，我会直接说不确定。</p>
+
+  <div class="todo">
+    <div class="t">【待确认】微信入口</div>
+    <div class="d">此处置放个人微信二维码图，或微信号文字<br>（需你提供后替换，页面暂不伪造入口）</div>
+  </div>
+
+  <p class="cta-sub">加上之后，直接说你在纠结什么就行。</p>
+</section>
+
+<footer class="wrap">
+  Samantha · 广州 · 2026
+</footer>
+
+<div class="bar">
+  <a href="#contact">想聊，加微信</a>
+</div>
+
+</body>
+</html>
